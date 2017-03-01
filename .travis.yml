@@ -20,3 +20,10 @@ script:
 #can do additional things, say send out reports, which we will discuss next time
 after_success:
   - codecov --token=16a01fb6-03c4-44bf-84aa-4c16afbf8a4a # upload coverage report to codecov.io
+
+deploy:
+  provider: s3
+  access_key_id: AKIAITSFRKJX2X7XQWPQ #populate with your own AWS access key
+  secret_access_key: mTKMBVeoGsozTi9noeoy0loj+61Hj2/MTubEFrug #populate with your own AWS secret key
+  bucket: cps847-testing
+  local-dir: html
